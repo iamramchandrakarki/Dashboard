@@ -3,6 +3,7 @@ import { SidebarProvider, SidebarInset } from './components/ui/sidebar';
 import { AppSidebar } from './components/AppSidebar';
 import { Header } from '@/components/Header';
 import { Page, PageHeader } from '@/components/Page';
+import { DashboardCard } from '@/components/DashboardCard';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
           <main>
             <Page>
               <PageHeader />
+              <div className=''>
+                <DashboardCard> </DashboardCard>
+              </div>
             </Page>
           </main>
         </SidebarInset>
