@@ -33,7 +33,7 @@ export const AppSidebar = () => {
     >
       <SidebarHeader>
         <SidebarMenu>
-          <SidebarMenuItem className='mt-4 mb-2 flex gap-5'>
+          <SidebarMenuItem className='px-0.5 max-lg:p-0'>
             <Logo variant={isMobile ? 'default' : 'icon'} />
           </SidebarMenuItem>
         </SidebarMenu>
