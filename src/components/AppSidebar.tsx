@@ -18,6 +18,7 @@ import { Logo } from '../assets/Logo';
 
 import { APP_SIDEBAR } from '../constants';
 import { useEffect } from 'react';
+import { UserMenu } from '@/components/UserMenu';
 
 export const AppSidebar = () => {
   const { isMobile, toggleSidebar } = useSidebar();
@@ -112,7 +113,7 @@ export const AppSidebar = () => {
                 </Button>
               </div>
             ) : (
-              <></>
+              <UserMenu />
             )}
           </SidebarMenuItem>
         </SidebarMenu>
