@@ -65,7 +65,7 @@ export const Logo = ({
           fontWeight='600'
           fontFamily='system-ui, -apple-system, BlinkMacSystemFont, sans-serif'
         >
-          Dashboard
+          NoobHub
         </text>
       </svg>
     );
