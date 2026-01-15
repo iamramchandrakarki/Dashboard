@@ -64,6 +64,7 @@ export const Logo = ({
           fontSize='18'
           fontWeight='600'
           fontFamily='system-ui, -apple-system, BlinkMacSystemFont, sans-serif'
+          color='black'
         >
           NoobHub
         </text>
