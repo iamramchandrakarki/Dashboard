@@ -1,7 +1,66 @@
-export const DashboardCard = () => {
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from '@/components/ui/dropdown-menu';
+import { Button } from '@/components/ui/button';
+import { EllipsisVerticalIcon } from 'lucide-react';
+import { DASHBOARD_CARD_MENU } from '@/constants';
+
+//types
+type Props = {
+  title: string;
+  description: string;
+  text?: string;
+  buttonText: string;
+  footerText?: string;
+};
+
+export const DashboardCard = ({
+  title,
+  description,
+  buttonText,
+  children,
+}: React.PropsWithChildren<Props>) => {
   return (
-    <h1 className='text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100'>
-      Dashboard
-    </h1>
+    <Card className='bg-background'>
+      <CardHeader className='border-b flex justify-between'>
+        <div>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
+        </div>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <EllipsisVerticalIcon size={20} />{' '}
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align='end'>
+            {DASHBOARD_CARD_MENU.map((item) => (
+              <DropdownMenuItem key={item.label}>
+                <item.Icon />
+                {item.label}
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </CardHeader>
+      <CardContent className='grid grid-cols-1 grow'>{children}</CardContent>
+      <CardFooter className='border-t'>
+        <Button
+          variant='outline'
+          className='ml-auto'
+        >
+          {buttonText}
+        </Button>
+      </CardFooter>
+    </Card>
   );
 };

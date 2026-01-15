@@ -16,7 +16,13 @@ function App() {
             <Page>
               <PageHeader />
               <div className=''>
-                <DashboardCard> </DashboardCard>
+                <DashboardCard
+                  title='Dashboard'
+                  description='Keep Track and Security ratings'
+                  buttonText='View Full Report'
+                >
+                  {' '}
+                </DashboardCard>
               </div>
             </Page>
           </main>
